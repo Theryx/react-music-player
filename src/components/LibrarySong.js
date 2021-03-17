@@ -1,6 +1,7 @@
-const LibrarySong = ({ song, songs, setCurrentSong, id }) => {
+const LibrarySong = ({ audioRef, song, songs, setCurrentSong, id }) => {
   const songSelectHandler = () => {
     setCurrentSong(song);
+    audioRef.current.play();
   };
   return (
     <div onClick={songSelectHandler} className="library-song">
